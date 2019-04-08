@@ -1,0 +1,178 @@
+@import "colors.scss";
+
+/* PODSTAWY */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: $primary-color-background;
+    color: $secondary-color-background;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+.clearfix {
+    zoom: 1
+}
+
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+section {
+    padding: 80px 0px;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+/* BANNER */
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/banner.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-textbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1140px;
+}
+
+.logo {
+    height: 160px;
+    width: auto;
+    margin-top: 20px;
+    float: left;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 40px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    color: $primary-color-background;
+    text-decoration: none;
+    font-size: 90%;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+    padding: 8px 0;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid;
+    border-color: $primary-orange;
+}
+
+
+/* HEADERY */
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+h1 {
+    color: $primary-color-background;
+    font-size: 200%;
+    margin: 0;
+    word-spacing: 4px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: $primary-orange;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+
+/* GUZICZKI */
+
+.btn-full:link,
+.btn-full:visited {
+    color: $primary-color-background;
+    background: $primary-orange;
+    border: 1px solid $primary-orange;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    color: $primary-orange;
+    border: 1px solid $primary-orange;
+}
+
+.btn:hover,
+.btn:active {
+    background: $secondary-orange;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid $secondary-orange;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    color: $primary-color-background;
+    border: 1px solid $secondary-orange;
+}
+
+.btn:link,
+.btn:visited {
+    border-radius: 200px;
+    text-decoration: none;
+    font-weight: 300;
+    padding: 10px 30px;
+    display: inline-block;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
