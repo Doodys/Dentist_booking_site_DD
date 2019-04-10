@@ -39,6 +39,12 @@ section {
     margin: 0 auto;
 }
 
+.box img {
+    height: AUTO;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
 
 /* BANNER */
 
@@ -176,4 +182,31 @@ h2:after {
     padding: 10px 30px;
     display: inline-block;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+
+/* IKONY */
+
+.ico-big {
+    font-size: 200%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.icon-big-orange {
+    color: $primary-orange;
+}
+
+.icon-big-turquoise {
+    color: $primary-turquoise;
+}
+
+
+/* SEKCJA O NAS */
+
+.o_nas {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 35px;
 }

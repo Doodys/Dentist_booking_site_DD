@@ -37,6 +37,12 @@ section {
   margin: 0 auto;
 }
 
+.box img {
+  height: AUTO;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
 /* BANNER */
 header {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/banner.jpg);
@@ -172,5 +178,28 @@ h2:after {
   display: inline-block;
   -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
   transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+/* IKONY */
+.ico-big {
+  font-size: 200%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.icon-big-orange {
+  color: #e67e22;
+}
+
+.icon-big-turquoise {
+  color: #39b1cc;
+}
+
+/* SEKCJA O NAS */
+.o_nas {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+  margin-bottom: 35px;
 }
 /*# sourceMappingURL=style.css.map */
