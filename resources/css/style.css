@@ -244,4 +244,44 @@ h2:after {
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
+
+/* PRACOWNICY */
+.dentist {
+  text-align: center;
+}
+
+.lekarze {
+  margin-left: 50px;
+  border-radius: 200px;
+  height: 600px;
+  width: 100%;
+}
+
+.Dobro {
+  background-color: #39b1cc;
+}
+
+.Dudys {
+  background-color: #e67e22;
+}
+
+.lekarze img {
+  height: 600px;
+  border-radius: 200px;
+  width: 100%;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.lekarze img:hover,
+.lekarze img:active {
+  opacity: 0.7;
+}
+
+.opis_lekarzy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+  margin-bottom: 35px;
+}
 /*# sourceMappingURL=style.css.map */
