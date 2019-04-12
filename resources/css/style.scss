@@ -261,22 +261,35 @@ h2:after {
 
 /* PRACOWNICY */
 
-.dentist {
+.lekarze-main {
     text-align: center;
+    margin-top: 60px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../resources/img/back-gray.jpg), ;
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+    background-position: 10px;
+}
+
+.dentist {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
 }
 
 .lekarze {
-    margin-left: 50px;
     border-radius: 200px;
     height: 600px;
-    width: 100%;
+    width: 450px;
 }
 
 .Dobro {
+    border: 3px solid $primary-orange;
     background-color: $primary-turquoise;
 }
 
 .Dudys {
+    border: 3px solid $primary-turquoise;
     background-color: $primary-orange;
 }
 
