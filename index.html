@@ -7,17 +7,20 @@
     <link rel='stylesheet' type='text/css' href='vendors/css/ionicons.min.css'>
     <link rel='stylesheet' type='text/css' href='resources/css/style.css'>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
-    <link href="resources/css/style.css" rel="stylesheet" type="text/css"> //
+    <link href="resources/css/style.css" rel="stylesheet" type="text/css">
     <meta meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="author" content="Michał Dudys, Natalia Dobrowolska">
+    <link href="vendors/css/hover-box.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+    <script src="vendors/js/hover-box.js"></script>
+    <script src="vendors/js/jquery-1.11.3.min.js"></script>
     <title>Dobro & Dudys - gabinet stomatologiczny</title>
 </head>
 
 <body>
     <header>
-        <nav data-toggle="sticky-onscroll">
-            <div class='row'>
-                <img src='resources/css/img/logo.jpg' alt='Dobro & Dudys - Gabinet stomatologiczny' class='logo'>
+        <nav>
+            <div class='row'>                                 
                 <ul class='main-nav'>
                     <li><a href='#o_nas'>O nas</a></li>
                     <li><a href='#uslugi'>Usługi</a></li>
@@ -27,8 +30,10 @@
                 </ul>
             </div>
         </nav>
-        <div class='hero-textbox'>
-            <h1>Tutaj jest tekst, zamiast którego<br>wrzucimy logo, której jest powyżej</h1>
+        <div class='hero-textbox'>  
+            <img src='resources/css/img/logo2.png' alt='Dobro & Dudys - Gabinet stomatologiczny' class='logo'>
+        </div>
+        <div class='hero-textbox guziczki'>      
             <a class='btn btn-full' href='#zapisz'>Umówmy się.</a>
             <a class='btn btn-ghost' href='#o_nas'>Coś o nas.</a>
         </div>
@@ -154,22 +159,18 @@
         <div class='lekarze-main'>
             <div class='dentist'>
                 <figure class='lekarze Dobro'>
-                    <img src='resources/img/doktur1.jpg' alt='Dobro'>
-                    <p>Natalia Dobrowolska</p>
+                    <img src='resources/img/doktur1.jpg' alt='Dobro'>                    
                 </figure>
+                <h3 class='podpis'>Natalia Dobrowolska</h3>               
             </div>
             <div class='dentist'>
                 <figure class='lekarze Dudys'>
-                    <img src='resources/img/doktur2.jpg' alt='Dudys'>
+                    <img src='resources/img/doktur2.jpg' alt='Dudys'>                    
                 </figure>
-                <p>Michał Dudys</p>
+                <h3 class='podpis'>Michał Dudys</h3>
             </div>
         </div>
     </section>
-    <link href="vendors/css/hover-box.css" rel="stylesheet" type="text/css">
-    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
-    <script src="vendors/js/hover-box.js"></script>
-    <script src="vendors/js/jquery-1.11.3.min.js"></script>
 </body>
 
 </html>

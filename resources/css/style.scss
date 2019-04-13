@@ -63,11 +63,18 @@ header {
     width: 1140px;
 }
 
+.hero-textbox img{
+    margin-bottom: 250px;
+    
+}
+
+.guziczki {
+    margin-top: 40px;
+}
+
 .logo {
-    height: 160px;
+    height: 250px;
     width: auto;
-    margin-top: 20px;
-    float: left;
 }
 
 .main-nav {
@@ -310,4 +317,8 @@ h2:after {
     width: 70%;
     margin-left: 15%;
     margin-bottom: 35px;
+}
+
+.podpis {
+    padding-top: 15px;
 }
