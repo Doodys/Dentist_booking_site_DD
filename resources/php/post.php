@@ -1,9 +1,9 @@
 <?php
-    mb_internal_encoding("UTF-8");
     $con = mysqli_connect('127.0.0.1', 'root', 'dudysdobrozomb');
 
     include 'checkExistance.php';
     include 'updateClient.php';
+    include 'addAppointment.php';
 
     if(!$con) {
         echo 'Not connected to server!';
@@ -19,8 +19,8 @@
     $NR_TELEFONU = $_POST['phone'];
     $ID_LEKARZA = $_POST['dent_list'];
     $CZY_PIERWSZA = $_POST['first_list'];
-    $ID_KLIENTA = $_POST['id_klienta'];
     $USLUGA = $_POST['job_list'];
+    $DATA = $_POST['datefield'];
 
     if ($CZY_PIERWSZA == "TAK") {
         if(checkMail($con, $EMAIL) > 0) {
@@ -41,6 +41,8 @@
             }
         }
     } else {
+        $ID_KLIENTA = $_POST['id_klienta'];
+
         $sql = updateClient($con, $EMAIL, $IMIE, $NAZWISKO, $NR_TELEFONU, $ID_KLIENTA);
         if(!mysqli_query($con,$sql)) {
             echo 'Błędne ID klienta! :(';

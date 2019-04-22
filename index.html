@@ -15,6 +15,8 @@
     <script src="vendors/js/hover-box.js"></script>
     <script src="vendors/js/jquery-1.11.3.min.js"></script>
     <script src='resources/js/enableClientID.js'></script>
+    <link href="vendors/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="vendors/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
     <title>Dobro & Dudys - gabinet stomatologiczny</title>
 </head>
 
@@ -173,15 +175,14 @@
         </div>
     </section>
 
-    <section class='testowy_formularz'>
+    <section class='testowy_formularz form-horizontal' id='zapisz'>
         <form action='resources/php/post.php' method='POST'>
             <fieldset>
                 <legend>Wpisz swoje dane ziom</legend>
                 Imię: <input type='text' name='imie' pattern='[A-Za-z\]+' required>
                 <br> Nazwisko: <input type='text' name='nazwisko' pattern='[A-Za-z\-]+' required>
                 <br> E-mail: <input type='email' name='mail' required>
-                <br> Numer telefonu: <input type='tel' name='phone' pattern='[0-9]{3}-[0-9]{3}-[0-9]{3}' required>
-                <span>Format: 123-456-789</span>
+                <br> Numer telefonu: <input type='tel' name='phone' pattern='[0-9]{3}-[0-9]{3}-[0-9]{3}' placeholder='123-456-789' required>
                 <br> Wybór lekarza: <select name='dent_list'>
                     <option value='1'>Michał Dudys</option>
                     <option value='2'>Natalia Dobrowolska</option>
@@ -196,7 +197,16 @@
                         <option value='Leczenie kanałowe'>Leczenie kanałowe</option>
                         <option value='Licówki porcelanowe'>Licówki porcelanowe</option>
                     </select>
-                <br>Pierwszy raz u nas? <select id='dropdown' name='first_list' onchange="di_en()">
+                <!-- <br>Wybierz datę: <input type='datetime-local' name='data' id='datefield' required> -->
+
+                <br>
+                <div class="input-group date form_datetime col-md-3" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                    <input class="form-control" size="16" type="text" value="" name='datefield' readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                </div>
+                <!-- <input type="hidden" id="dtp_input1" value="" /> -->
+                <br><br>Pierwszy raz u nas? <select id='dropdown' name='first_list' onchange="di_en()">
                         <option value='TAK'>TAK</option>
                         <option value='NIE'>NIE</option>
                 </select>
@@ -205,6 +215,44 @@
             </fieldset>
         </form>
     </section>
+
+    <script type="text/javascript" src="vendors/js/jquery-1.8.3.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="vendors/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendors/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="vendors/js/bootstrap-datetimepicker.pl.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+        $('.form_datetime').datetimepicker({
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            forceParse: 0,
+            showMeridian: 0
+        });
+        $('.form_date').datetimepicker({
+            language: 'pl',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        });
+        $('.form_time').datetimepicker({
+            language: 'pl',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 1,
+            minView: 0,
+            maxView: 1,
+            forceParse: 0
+        });
+    </script>
+
 </body>
 
 </html>
