@@ -38,7 +38,7 @@
         else {
             $sql = "INSERT INTO KLIENCI_T (EMAIL,IMIE,NAZWISKO,NR_TELEFONU) VALUES('$EMAIL','$IMIE','$NAZWISKO','$NR_TELEFONU')";
             if(!mysqli_query($con,$sql)) {
-                echo 'Coś poszło nie tak :(';
+                $string = 'Coś poszło nie tak :(';
                 notSexy($string);
             }
             else {
@@ -46,7 +46,7 @@
                 $sql = "INSERT INTO WIZYTY_T (CZY_PIERWSZA, DATA, GODZINA, ID_KLIENTA, ID_LEKARZA, USLUGA) VALUES ('$CZY_PIERWSZA','$DATA','$GODZINA','$ID_KLIENTA','$ID_LEKARZA','$USLUGA')";
 
                 if(!mysqli_query($con,$sql)) {
-                    echo 'Coś poszło nie tak :(';
+                    $string = 'Coś poszło nie tak :(';
                     notSexy($string);
                 } else {
                     $string = 'Dodano klienta!';
@@ -69,5 +69,5 @@
         }
     }
 
-    header("refresh:2; url=../../index.html");
+    header("refresh:3; url=../../index.html");
 ?>
