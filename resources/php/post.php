@@ -20,11 +20,17 @@
     $ID_LEKARZA = $_POST['dent_list'];
     $CZY_PIERWSZA = $_POST['first_list'];
     $USLUGA = $_POST['job_list'];
+<<<<<<< HEAD
     $DATA = $_POST['app_date'];
     $GODZINA = $_POST['app_time'];
 
     if ($CZY_PIERWSZA == "TAK") {
 
+=======
+    $DATA = $_POST['datefield'];
+
+    if ($CZY_PIERWSZA == "TAK") {
+>>>>>>> master
         if(checkMail($con, $EMAIL) > 0) {
             echo 'Podany e-mail jest już zarejestrowany!';
         }
@@ -37,6 +43,7 @@
                 echo 'Not inserted :(';
             }
             else {
+<<<<<<< HEAD
                 $ID_KLIENTA = getMaxId($con);
                 $sql = "INSERT INTO WIZYTY_T (CZY_PIERWSZA, DATA, GODZINA, ID_KLIENTA, ID_LEKARZA, USLUGA) VALUES ('$CZY_PIERWSZA','$DATA','$GODZINA','$ID_KLIENTA','$ID_LEKARZA','$USLUGA')";
 
@@ -47,6 +54,11 @@
                 echo 'Dodano klienta!';
                 echo '</div>';
                 }
+=======
+                echo '<div class="dodano_klienta">';
+                echo 'Dodano klienta!  ';
+                echo '</div>';
+>>>>>>> master
             }
         }
     } else {
@@ -57,7 +69,10 @@
             echo 'Błędne ID klienta! :(';
         }
         else {
+<<<<<<< HEAD
             $sql = "INSERT INTO WIZYTY_T (CZY_PIERWSZA, DATA, GODZINA, ID_KLIENTA, ID_LEKARZA, USLUGA) VALUES ('$CZY_PIERWSZA','$DATA','$GODZINA','$ID_KLIENTA','$ID_LEKARZA','$USLUGA')";
+=======
+>>>>>>> master
             echo '<div class="dodano_klienta">';
             echo 'Dodano klienta!  ';
             echo '</div>';
