@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang='pl'>
+<head>
+    <meta charset="utf-8" />
+    <title>Dobro & Dudys - gabinet stomatologiczny</title>
+    <link rel='stylesheet' type='text/css' href='resources/fontello/css/fontello.css'>
+    <link rel='stylesheet' type='text/css' href='vendors/css/normalize.css'>
+    <link rel='stylesheet' type='text/css' href='vendors/css/grid.css'>
+    <link rel='stylesheet' type='text/css' href='vendors/css/ionicons.min.css'>
+    <link rel='stylesheet' type='text/css' href='resources/css/style.css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+    <link href="resources/css/style.css" rel="stylesheet" type="text/css">
+    <meta meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="author" content="Michał Dudys, Natalia Dobrowolska">
+    <link href="vendors/css/hover-box.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+    <script src="vendors/js/hover-box.js"></script>
+    <script src="vendors/js/jquery-1.11.3.min.js"></script>
+    <script src='resources/js/enableClientID.js'></script>
+    <script src='resources/js/minDate.js'></script>
+</head>
+<body>
+    <nav>
+        <div class='row1'>
+            <ul class='main-nav'>
+                <li><a href='index.html'>O nas</a></li>
+                <li><a href='index.html'>Usługi</a></li>
+                <li><a href='index.html'>Pracownicy</a></li>
+                <li><a href='#zapisz'>Zamów wizytę</a></li>
+                <li><a href='index.html'>Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class='testowy_formularz form-horizontal' id='zapisz'>
+        <form action='resources/php/post.php' method='POST'>
+
+            <fieldset>
+
+                <legend>Formularz kontaktowy</legend>
+                <div class="for1">
+                    <div class='for'>
+                        Imię: <input type='text' name='imie' pattern='[A-Za-z\]+' required>
+                    </div>
+                    <div class='for'>
+                        <br> Nazwisko: <input type='text' name='nazwisko' pattern='[A-Za-z\-]+' required>
+                    </div>
+                    <div class='for'>
+                        <br> E-mail: <input type='email' name='mail' required>
+                    </div>
+                    <div class='for'>
+                        <br> Numer telefonu: <input type='tel' name='phone' pattern='[0-9]{3}-[0-9]{3}-[0-9]{3}' placeholder='123-456-789' required>
+                    </div>
+                    <div class='for'>
+                        <br> Wybór lekarza: <select name='dent_list'>
+                            <option value='1'>Michał Dudys</option>
+                            <option value='2'>Natalia Dobrowolska</option>
+                        </select>
+                    </div>
+                    <div class='for'>
+                        <br>Wybór usługi: <select name='job_list'>
+                            <option value='Wizyta kontrolna'>Wizyta kontrolna</option>
+                            <option value='Korony'>Korony</option>
+                            <option value='Stomatologia kosmetyczna'>Stomatologia kosmetyczna</option>
+                            <option value='Protezy'>Protezy</option>
+                            <option value='Odbudowa jamy ustnej'>Odbudowa jamy ustnej</option>
+                            <option value='Implantologia stomatologiczna'>Implantologia stomatologiczna</option>
+                            <option value='Leczenie kanałowe'>Leczenie kanałowe</option>
+                            <option value='Licówki porcelanowe'>Licówki porcelanowe</option>
+                        </select>
+                    </div>
+
+                    <!-- <br>Wybierz datę: <input type='datetime-local' name='data' id='datefield' required> -->
+
+                    <br>
+                    <div class="input-group date form_datetime col-md-3" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                        <input class="form-control" size="16" type="text" value="" name='datefield' readonly>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                    </div>
+                    <!-- <input type="hidden" id="dtp_input1" value="" /> -->
+                    <div class='for'>
+                        <br><br>Pierwszy raz u nas? <select id='dropdown' name='first_list' onchange="di_en()">
+                            <option value='TAK'>TAK</option>
+                            <option value='NIE'>NIE</option>
+                        </select>
+                        <br><label id='id_input_text' style='visibility: hidden;'>Podaj swoje unikalne ID pracjenta: </label><input type='number' name='id_klienta' id='id_input' style='visibility: hidden;' required>
+                        <br><input type='submit' value='Zatwierdź wybór'>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </section>
+
+    <script type="text/javascript" src="vendors/js/jquery-1.8.3.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="vendors/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendors/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="vendors/js/bootstrap-datetimepicker.pl.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+        $('.form_datetime').datetimepicker({
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            forceParse: 0,
+            showMeridian: 0
+        });
+        $('.form_date').datetimepicker({
+            language: 'pl',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        });
+        $('.form_time').datetimepicker({
+            language: 'pl',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 1,
+            minView: 0,
+            maxView: 1,
+            forceParse: 0
+        });
+    </script>
+    <section class="social">
+        <div class="socialdivs">
+            <a href='https://www.facebook.com/DentistMemes/' target="_blank">
+                <div class="fb"><i class="icon-facebook-official"></i></div>
+            </a>
+            <a href='https://www.youtube.com/watch?v=zwDQEMbAra8&fbclid=IwAR14_I5qx0BDXAxgrRo8F9qEr7sIXLqQpMKc7CCFeZKVTDTwLMXz-QJ3bjs' target="_blank">
+                <div class="yt"><i class="icon-youtube"></i></div>
+            </a>
+            <a href='https://sayingimages.com/wp-content/uploads/and-then-dentist-meme.jpg' target= ='_blank'>
+                <div class="gp"><i class="icon-gplus"></i></div>
+            </a>
+            <a href='https://twitter.com/IsmaelKherGar/status/1123529682593488901' target="_blank">
+                <div class="tw"><i class="icon-twitter"></i></div>
+            </a>
+            <div style="clear:both"></div>
+        </div>
+    </section>
+    <section class="footer">
+        Dobro & Dudys   &copy; 2019  All puns intended.
+
+    </section>
+
+</body>
+</html>
