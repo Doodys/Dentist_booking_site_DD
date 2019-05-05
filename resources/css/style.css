@@ -339,12 +339,15 @@ h2:after {
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
+
+   
 }
 
 .social {
     width: 100%;
     text-align: center;
     background-color: #555;
+    
     padding: 0 0;
 }
 
@@ -388,10 +391,25 @@ h2:after {
         background-color: #3095d3;
     }
 /*KONTAKT*/
+.kk {
+    
+    margin-bottom: 0px;
+    padding: 0px;
+    height: auto;
+    background-color:#777;
+}
+
 .k {
-    float: left;
-    background-color: #555;
-    font: #fff;
+    margin-left:150px;
+    margin-top:80px;
+    float:left;
+    text-align:center;
+    color:#fff;
+}
+
+.mapka{
+   
+
 }
 
 /* STOPKA */
@@ -401,6 +419,7 @@ h2:after {
     text-align: center;
     font-size: 14px;
     color: #ffffff;
+    height:40px;
 }
 
 /*FORMULARZ*/
