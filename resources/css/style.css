@@ -415,7 +415,6 @@ h2:after {
     margin-bottom: 0px;
     padding: 0px;
     height: auto;
-    background-color: #777;
 }
 
 .k {
@@ -423,10 +422,7 @@ h2:after {
     margin-top: 80px;
     float: left;
     text-align: center;
-    color: #fff;
 }
-
-.mapka {}
 
 
 /* STOPKA */
