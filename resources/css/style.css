@@ -1,311 +1,452 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /* PODSTAWY */
 * {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Lato;
 }
 
 html {
-  background-color: #fff;
-  color: #555;
-  font-family: 'Lato', 'Arial', sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  text-rendering: optimizeLegibility;
-  scroll-behavior: smooth;
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
 }
 
 .clearfix {
-  zoom: 1;
+    zoom: 1;
 }
 
-.clearfix:after {
-  content: '.';
-  clear: both;
-  display: block;
-  height: 0;
-  visibility: hidden;
-}
+    .clearfix:after {
+        content: '.';
+        clear: both;
+        display: block;
+        height: 0;
+        visibility: hidden;
+    }
 
 section {
-  padding: 80px 0px;
+    padding: 80px 0px;
+    text-align: center;
+}
+
+.row1 {
+    height: 90px;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #555;
+    opacity: 0.9;
+    text-align: center;
+    border-top: 2px solid #e67e22;
+    border-bottom: 2px solid #e67e22;
+    font-weight: bold;
+}
+
+.sticky {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
 }
 
 .row {
-  max-width: 1140px;
-  margin: 0 auto;
+    max-width: 1140px;
+    margin: 0 auto;
 }
 
 .box img {
-  height: AUTO;
-  width: 100%;
-  margin-bottom: 15px;
+    height: AUTO;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 /* BANNER */
 header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/banner.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/banner.jpg);
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/banner.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/banner.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
 }
 
 .hero-textbox {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 1140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 1140px;
 }
 
-.hero-textbox img {
-  margin-bottom: 250px;
-}
+    .hero-textbox img {
+        margin-bottom: 250px;
+    }
 
 .guziczki {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 
 .logo {
-  height: 250px;
-  width: auto;
+    height: 250px;
+    width: auto;
 }
 
 .main-nav {
-  float: right;
-  list-style: none;
-  margin-top: 40px;
+    float: none;
+    list-style: none;
+    margin-top: 20px;
 }
 
-.main-nav li {
-  display: inline-block;
-  margin-left: 40px;
-}
+    .main-nav li {
+        display: inline-block;
+        margin-left: 40px;
+    }
 
-.main-nav li a:link,
-.main-nav li a:visited {
-  color: #fff;
-  text-decoration: none;
-  font-size: 90%;
-  text-transform: uppercase;
-  border-bottom: 2px solid transparent;
-  -webkit-transition: border-bottom 0.2s;
-  transition: border-bottom 0.2s;
-  padding: 8px 0;
-}
+        .main-nav li a:link,
+        .main-nav li a:visited {
+            color: #e67e22;
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            border-bottom: 2px solid transparent;
+            -webkit-transition: border-bottom 0.2s;
+            transition: border-bottom 0.2s;
+            padding: 8px 0;
+        }
 
-.main-nav li a:hover,
-.main-nav li a:active {
-  border-bottom: 2px solid;
-  border-color: #e67e22;
-}
+        .main-nav li a:hover,
+        .main-nav li a:active {
+            border-bottom: 2px solid;
+            border-color: #e67e22;
+        }
 
 /* HEADERY */
 h1,
 h2,
 h3 {
-  text-transform: uppercase;
-  font-weight: 300;
+    text-transform: uppercase;
+    font-weight: 300;
 }
 
 h1 {
-  color: #fff;
-  font-size: 200%;
-  margin: 0;
-  word-spacing: 4px;
-  margin-bottom: 20px;
-  margin-top: 0px;
-  letter-spacing: 1px;
+    color: #fff;
+    font-size: 200%;
+    margin: 0;
+    word-spacing: 4px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    letter-spacing: 1px;
 }
 
 h2 {
-  font-size: 180%;
-  word-spacing: 2px;
-  text-align: center;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
 }
 
 h3 {
-  font-size: 110%;
-  margin-bottom: 15px;
+    font-size: 110%;
+    margin-bottom: 15px;
 }
 
 h2:after {
-  display: block;
-  height: 2px;
-  background-color: #e67e22;
-  content: " ";
-  width: 100px;
-  margin: 0 auto;
-  margin-top: 30px;
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
 }
 
 /* GUZICZKI */
 .btn-full:link,
 .btn-full:visited {
-  color: #fff;
-  background: #e67e22;
-  border: 1px solid #e67e22;
-  margin-right: 15px;
+    color: #fff;
+    background: #e67e22;
+    border: 1px solid #e67e22;
+    margin-right: 15px;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
-  color: #e67e22;
-  border: 1px solid #e67e22;
+    color: #e67e22;
+    border: 1px solid #e67e22;
 }
 
 .btn:hover,
 .btn:active {
-  background: #cf6d17;
+    background: #cf6d17;
 }
 
 .btn-full:hover,
 .btn-full:active {
-  border: 1px solid #cf6d17;
+    border: 1px solid #cf6d17;
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
-  color: #fff;
-  border: 1px solid #cf6d17;
+    color: #fff;
+    border: 1px solid #cf6d17;
 }
 
 .btn:link,
 .btn:visited {
-  border-radius: 200px;
-  text-decoration: none;
-  font-weight: 300;
-  padding: 10px 30px;
-  display: inline-block;
-  -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
-  transition: background-color 0.2s, border 0.2s, color 0.2s;
+    border-radius: 200px;
+    text-decoration: none;
+    font-weight: 300;
+    padding: 10px 30px;
+    display: inline-block;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
 /* IKONY */
 .ico-big {
-  font-size: 200%;
-  display: block;
-  margin-bottom: 10px;
+    font-size: 200%;
+    display: block;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .icon-big-orange {
-  color: #e67e22;
+    color: #e67e22;
 }
 
 .icon-big-turquoise {
-  color: #39b1cc;
+    color: #39b1cc;
 }
 
 /* SEKCJA O NAS */
 .o_nas {
-  line-height: 145%;
-  width: 70%;
-  margin-left: 15%;
-  margin-bottom: 35px;
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 35px;
+    font-size: 23px;
+    text-align: center;
 }
 
 /* SEKCJA USŁUGI */
 .section-service {
-  padding: 0;
+    padding: 0;
 }
 
 .service-showcase {
-  width: 100%;
-  list-style: none;
+    width: 100%;
+    list-style: none;
 }
 
-.service-showcase li {
-  float: left;
-  display: block;
-  width: 25%;
-}
+    .service-showcase li {
+        float: left;
+        display: block;
+        width: 25%;
+    }
 
 .dentist-photo {
-  width: 100%;
-  margin: 0;
-  overflow: hidden;
-  background-color: black;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
 }
 
-.dentist-photo img {
-  width: 100%;
-  height: 300px;
-  opacity: 0.7;
-}
+    .dentist-photo img {
+        width: 100%;
+        height: 300px;
+        opacity: 0.7;
+    }
 
 .hvrbox .hvrbox-layer_slidedown {
-  -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
 }
 
 .hvrbox:hover .hvrbox-layer_slidedown,
 .hvrbox.active .hvrbox-layer_slidedown,
 .dentist-photo img:hover {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
 }
 
 /* PRACOWNICY */
 .lekarze-main {
-  text-align: center;
-  margin-top: 60px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../../resources/img/back-gray.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../resources/img/back-gray.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 400px;
-  background-position: 10px;
+    text-align: center;
+    margin-top: 60px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../../resources/img/back-gray.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../resources/img/back-gray.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+    background-position: 10px;
 }
 
 .dentist {
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
 }
 
 .lekarze {
-  border-radius: 200px;
-  height: 600px;
-  width: 450px;
+    border-radius: 200px;
+    height: 600px;
+    width: 450px;
 }
 
 .Dobro {
-  border: 3px solid #e67e22;
-  background-color: #39b1cc;
+    border: 3px solid #e67e22;
+    background-color: #39b1cc;
 }
 
 .Dudys {
-  border: 3px solid #39b1cc;
-  background-color: #e67e22;
+    border: 3px solid #39b1cc;
+    background-color: #e67e22;
 }
 
 .lekarze img {
-  height: 600px;
-  border-radius: 200px;
-  width: 100%;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+    height: 600px;
+    border-radius: 200px;
+    width: 100%;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
 }
 
-.lekarze img:hover,
-.lekarze img:active {
-  opacity: 0.7;
-}
+    .lekarze img:hover,
+    .lekarze img:active {
+        opacity: 0.7;
+    }
 
 .opis_lekarzy {
-  line-height: 145%;
-  width: 70%;
-  margin-left: 15%;
-  margin-bottom: 35px;
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 35px;
 }
 
 .podpis {
-  padding-top: 15px;
+    padding-top: 15px;
+}
+/*SOCIALE*/
+.socialdivs {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social {
+    width: 100%;
+    text-align: center;
+    background-color: #555;
+    padding: 0 0;
+}
+
+.fb {
+    float: left;
+    width: 250px;
+    height: 155px;
+}
+
+    .fb:hover {
+        background-color: #4668b3;
+    }
+
+.yt {
+    float: left;
+    width: 250px;
+    height: 155px;
+}
+
+    .yt:hover {
+        background-color: #d94348;
+    }
+
+.gp {
+    float: left;
+    width: 250px;
+    height: 155px;
+}
+
+    .gp:hover {
+        background-color: #d95333;
+    }
+
+.tw {
+    float: left;
+    width: 250px;
+    height: 155px;
+}
+
+    .tw:hover {
+        background-color: #3095d3;
+    }
+/*KONTAKT*/
+.k {
+    float: left;
+    background-color: #555;
+    font: #fff;
+}
+
+/* STOPKA */
+.footer {
+    padding: 10px;
+    background-color: #e67e22;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/*FORMULARZ*/
+.testowy_formularz {
+    box-sizing: border-box;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#e67e22,#3095d3);
+}
+
+.for1 {
+    padding: 10px 20px;
+    margin-top: 10px;
+    max-width: 500px;
+    height: 550px;
+    background-color: #fff;
+    border-radius: 40px;
+}
+
+.for {
+    margin: 10px auto;
+    max-width: 500px;
+    font-weight: 500;
+}
+
+    .for input[type=tel],
+    .for input[type=text],
+    .for input[type=email],
+    .for select,
+    .for textarea {
+        padding: 2px 10px;
+        color: #333;
+        height: 30px;
+    }
+
+input[type=submit] {
+    font-size: 16px;
+    margin-top: 15px;
+    background-color: #e67e22;
+    color: #fff;
+    height: 35px;
+    width: 190px;
+    border-radius: 20px;
+    border-color: #fff;
+    border: none;
 }
 /*# sourceMappingURL=style.css.map */
