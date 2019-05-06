@@ -57,7 +57,7 @@
     } else {
         $ID_KLIENTA = $_POST['id_klienta'];
 
-        $sql = updateClient($con, $EMAIL, $IMIE, $NAZWISKO, $NR_TELEFONU, $ID_KLIENTA);
+        $sql = checkIfExist($con, $ID_KLIENTA);
         if(!mysqli_query($con,$sql)) {
             $string = 'Błędne ID klienta!';
             notSexy($string);
