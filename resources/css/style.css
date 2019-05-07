@@ -412,6 +412,11 @@ h2:after {
 
 /*KONTAKT*/
 
+.kontakt h2 {
+    margin-top: -80px;
+    padding-bottom: 40px;
+}
+
 .kk {
     margin-bottom: 0px;
     padding: 0px;
@@ -419,10 +424,24 @@ h2:after {
 }
 
 .k {
-    margin-left: 150px;
-    margin-top: 80px;
+    display: block;
+    padding-left: 400px;
     float: left;
     text-align: center;
+}
+
+.bolded:after {
+    display: block;
+    height: 2px;
+    background-color: #39b1cc;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.mapka iframe {
+    margin-right: 300px;
 }
 
 
