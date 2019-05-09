@@ -257,6 +257,7 @@ h2:after {
     padding: 0;
 }
 
+
 .service-showcase {
     width: 100%;
     list-style: none;
@@ -507,7 +508,7 @@ input[type=submit] {
 /*PODSTRONY*/
 
 .zabiegi{
-   background-color:#999;
+   background-color:#939393;
 }
 
 .zabieg {
@@ -515,7 +516,10 @@ input[type=submit] {
     color:#fff;
     margin-top:20px;
 
-
+}
+.opis{
+    margin-left:20px;
+    margin-right:20px;
 }
 
 
