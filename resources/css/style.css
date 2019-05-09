@@ -504,6 +504,19 @@ input[type=submit] {
     border-color: #fff;
     border: none;
 }
+/*PODSTRONY*/
+
+.zabiegi{
+   background-color:#999;
+}
+
+.zabieg {
+    text-align: center;
+    color:#fff;
+    margin-top:20px;
+
+
+}
 
 
 /*# sourceMappingURL=style.css.map */
