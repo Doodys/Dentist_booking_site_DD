@@ -459,14 +459,22 @@ h2:after {
 
 
 /*FORMULARZ*/
-
+.fom {
+    background-image: linear-gradient(#e67e22, #3095d3);
+}
 .testowy_formularz {
     box-sizing: border-box;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(#e67e22, #3095d3);
+    color:#fff;
+    font:bolder;
+    font-size:30px;
+   
+   
+    
+   
 }
 
 .for1 {
@@ -475,24 +483,37 @@ h2:after {
     max-width: 500px;
     height: 550px;
     background-color: #fff;
-    border-radius: 40px;
+    color: #e67e22;
+    box-shadow: 0 0 20px 2px #333;
+    border-radius: 30px;
+    font-size:20px;
+
+
 }
 
 .for {
     margin: 10px auto;
     max-width: 500px;
-    font-weight: 500;
+    
 }
 
-.for input[type=tel],
-.for input[type=text],
-.for input[type=email],
-.for select,
-.for textarea {
-    padding: 2px 10px;
-    color: #333;
-    height: 30px;
-}
+    .for input[type=tel],
+    .for input[type=date],
+    .for input[type=text],
+    .for input[type=email],
+    .for input[type=time],
+    .for select,
+    .for textarea {
+        padding: 2px 10px;
+        height: 30px;
+        outline: none;
+        border: 1px solid #999;
+        border-radius: 3px;
+        cursor: pointer;
+
+
+    }
+
 
 input[type=submit] {
     font-size: 16px;
@@ -504,6 +525,16 @@ input[type=submit] {
     border-radius: 20px;
     border-color: #fff;
     border: none;
+    cursor: pointer;
+}
+.for input[type=tel]:focus,
+.for input[type=time]:focus,
+.for input[type=date]:focus,
+.for input[type=text]:focus,
+.for input[type=email]:focus,
+.for select:focus,
+.for textarea:focus {
+    border-color: #FF6F00;
 }
 /*PODSTRONY*/
 

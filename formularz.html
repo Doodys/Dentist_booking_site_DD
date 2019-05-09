@@ -27,65 +27,66 @@
             </ul>
         </div>
     </nav>
-
-    <section class='testowy_formularz form-horizontal' id='zapisz'>
-        <form action='resources/php/post.php' method='POST'>
-            <fieldset>
-                <legend>Formularz kontaktowy</legend>
-                <div class="for1">
-                    <div class='for'>
-                        Pierwszy raz u nas? <select id='dropdown' name='first_list' onchange="di_en()" onchange='di_en_form()'>
-                                    <option value='TAK'>TAK</option>
-                                    <option value='NIE'>NIE</option>
-                                </select>
-                        <br><br><label id='id_input_text' style='visibility: hidden;'>Podaj swoje unikalne ID pracjenta: </label><input type='number' name='id_klienta' id='id_input' style='visibility: hidden;'>
-                    </div>
-                    <div id='full_form' style='visibility: visible;'>
+    <section class="fom">
+        <section class='testowy_formularz form-horizontal' id='zapisz'>
+            <form action='resources/php/post.php' method='POST'>
+                <fieldset style="border:none;">
+                    <legend>Formularz kontaktowy</legend>
+                    <div class="for1">
                         <div class='for'>
-                            Imię: <input type='text' name='imie' id='form_part' pattern='[A-Za-z\]+'>
+                            Pierwszy raz u nas? <select id='dropdown' name='first_list' onchange="di_en()" onchange='di_en_form()'>
+                                <option value='TAK'>TAK</option>
+                                <option value='NIE'>NIE</option>
+                            </select>
+                            <br><br><label id='id_input_text' style='visibility: hidden;'>Podaj swoje unikalne ID pracjenta: </label><input type='number' name='id_klienta' id='id_input' style='visibility: hidden;'>
+                        </div>
+                        <div id='full_form' style='visibility: visible;'>
+                            <div class='for'>
+                                Imię: <input type='text' name='imie' id='form_part' pattern='[A-Za-z\]+'>
+                            </div>
+                            <div class='for'>
+                                Nazwisko: <input type='text' name='nazwisko' id='form_part' pattern='[A-Za-z\-]+'>
+                            </div>
+                            <div class='for'>
+                                E-mail: <input type='email' name='mail' id='form_part'>
+                            </div>
+                            <div class='for'>
+                                Numer telefonu: <input type='tel' name='phone' id='form_part' pattern='[0-9]{3}-[0-9]{3}-[0-9]{3}' placeholder='123-456-789'>
+                            </div>
                         </div>
                         <div class='for'>
-                            Nazwisko: <input type='text' name='nazwisko' id='form_part' pattern='[A-Za-z\-]+'>
+                            Wybór lekarza: <select name='dent_list'>
+                                <option value='1'>Michał Dudys</option>
+                                <option value='2'>Natalia Dobrowolska</option>
+                            </select>
                         </div>
                         <div class='for'>
-                            E-mail: <input type='email' name='mail' id='form_part'>
+                            Wybór usługi: <select name='job_list'>
+                                <option value='Wizyta kontrolna'>Wizyta kontrolna</option>
+                                <option value='Korony'>Korony</option>
+                                <option value='Stomatologia kosmetyczna'>Stomatologia kosmetyczna</option>
+                                <option value='Protezy'>Protezy</option>
+                                <option value='Odbudowa jamy ustnej'>Odbudowa jamy ustnej</option>
+                                <option value='Implantologia stomatologiczna'>Implantologia stomatologiczna</option>
+                                <option value='Leczenie kanałowe'>Leczenie kanałowe</option>
+                                <option value='Licówki porcelanowe'>Licówki porcelanowe</option>
+                            </select>
                         </div>
+
+                        <!-- NOWY KALENDARZ -->
                         <div class='for'>
-                            Numer telefonu: <input type='tel' name='phone' id='form_part' pattern='[0-9]{3}-[0-9]{3}-[0-9]{3}' placeholder='123-456-789'>
+                            Data: <input type='date' id='datefield' name='app_date' min='1899-01-01' max='2030-12-31' onmouseover="minDate()" required>
+                            <br>Godzina: <input type='time' id='timefield' name='app_time' onmouseover="minTime()" step="1800" required>
                         </div>
-                    </div>
-                    <div class='for'>
-                        Wybór lekarza: <select name='dent_list'>
-                            <option value='1'>Michał Dudys</option>
-                            <option value='2'>Natalia Dobrowolska</option>
-                        </select>
-                    </div>
-                    <div class='for'>
-                        Wybór usługi: <select name='job_list'>
-                            <option value='Wizyta kontrolna'>Wizyta kontrolna</option>
-                            <option value='Korony'>Korony</option>
-                            <option value='Stomatologia kosmetyczna'>Stomatologia kosmetyczna</option>
-                            <option value='Protezy'>Protezy</option>
-                            <option value='Odbudowa jamy ustnej'>Odbudowa jamy ustnej</option>
-                            <option value='Implantologia stomatologiczna'>Implantologia stomatologiczna</option>
-                            <option value='Leczenie kanałowe'>Leczenie kanałowe</option>
-                            <option value='Licówki porcelanowe'>Licówki porcelanowe</option>
-                        </select>
-                    </div>
+                            <!--KONIEC NOWEGO KALENDARZA -->
 
-                    <!-- NOWY KALENDARZ -->
-
-                    Data: <input type='date' id='datefield' name='app_date' min='1899-01-01' max='2030-12-31' onmouseover="minDate()" required>
-                    <br>Godzina: <input type='time' id='timefield' name='app_time' onmouseover="minTime()" step="1800" required>
-
-                    <!--KONIEC NOWEGO KALENDARZA -->
-
-                    <div class='for'>
-                        <input type='submit' value='Zatwierdź wybór'>
-                    </div>
-                </div>
-            </fieldset>
-        </form>
+                            <div class='for'>
+                                <input type='submit' value='Zatwierdź wybór'>
+                            </div>
+                        </div>
+</fieldset>
+            </form>
+        </section>
     </section>
 
     <section class="social">
