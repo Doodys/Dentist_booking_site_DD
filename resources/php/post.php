@@ -27,13 +27,19 @@
 
     if ($CZY_PIERWSZA == "TAK") {
 
+        if($ID_LEKARZA == 1) { $lekarz = 'Michała Dudys'; } else { $lekarz = 'Natalii Dobrowolskiej'; }
+
         if(checkMail($con, $EMAIL) > 0) {
             $string = 'Podany e-mail jest już zarejestrowany!';
             notSexy($string);
         }
         else if (checkPhone($con, $NR_TELEFONU) > 0) {
             $string = 'Podany numer telefonu jest już zarejestrowany!';
-            notSexy($string);           
+            notSexy($string);
+        }
+        else if (checkyDate($con, $DATA, $GODZINA, $ID_LEKARZA) > 0) {
+            $string = 'Godzina ' . $GODZINA . ' dnia ' . $DATA . ' u ' . $lekarz . ' jest już zarezerwowana!';
+            notSexy($string);
         }
         else {
             $sql = "INSERT INTO klienci_t (EMAIL,IMIE,NAZWISKO,NR_TELEFONU) VALUES('$EMAIL','$IMIE','$NAZWISKO','$NR_TELEFONU')";
@@ -52,16 +58,23 @@
                 } else {
                     $string = 'Dodano wizytę!';
                     sexyView($string);
+                    echo checkyDate($con, $DATA, $GODZINA, $ID_LEKARZA);
                 }
             }
         }
     } else {
         $ID_KLIENTA = $_POST['id_klienta'];
 
+        if($ID_LEKARZA == 1) { $lekarz = 'Michała Dudys'; } else { $lekarz = 'Natalii Dobrowolskiej'; }
+
         $sql = "SELECT ID_KLIENTA FROM klienci_t WHERE ID_KLIENTA = $ID_KLIENTA";
-        
+
         if(!mysqli_query($con,$sql) || empty($sql)) {
             $string = 'Błędne ID klienta!';
+            notSexy($string);
+        }
+        else if(checkyDate($con, $DATA, $GODZINA, $ID_LEKARZA) > 0){
+            $string = 'Godzina ' . $GODZINA . ' dnia ' . $DATA . ' u ' . $lekarz . ' jest już zarezerwowana!';
             notSexy($string);
         }
         else {
@@ -79,4 +92,4 @@
     }
 
     header("refresh:3; url=../../index.html");
-?>		
+?>
