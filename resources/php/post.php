@@ -1,5 +1,5 @@
 <?php
-    $con = mysqli_connect('127.0.0.1', 'root', 'dudysdobrozomb');
+    $con = mysqli_connect('mysql.cba.pl', 'dojdyl', '1Q0@2m9jot', 'dojdyl');
 
     include 'checkExistance.php';
     include 'updateClient.php';
@@ -11,7 +11,7 @@
         echo 'Not connected to server!';
     }
 
-    if(!mysqli_select_db($con, 'dentist_prod')) {
+    if(!mysqli_select_db($con, 'dojdyl')) {
         echo 'Database not selected!';
     }
 
@@ -33,23 +33,24 @@
         }
         else if (checkPhone($con, $NR_TELEFONU) > 0) {
             $string = 'Podany numer telefonu jest już zarejestrowany!';
-            notSexy($string);
+            notSexy($string);           
         }
         else {
-            $sql = "INSERT INTO KLIENCI_T (EMAIL,IMIE,NAZWISKO,NR_TELEFONU) VALUES('$EMAIL','$IMIE','$NAZWISKO','$NR_TELEFONU')";
+            $sql = "INSERT INTO klienci_t (EMAIL,IMIE,NAZWISKO,NR_TELEFONU) VALUES('$EMAIL','$IMIE','$NAZWISKO','$NR_TELEFONU')";
             if(!mysqli_query($con,$sql)) {
                 $string = 'Coś poszło nie tak :(';
                 notSexy($string);
+                mysqli_error($con);
             }
             else {
                 $ID_KLIENTA = getMaxId($con);
-                $sql = "INSERT INTO WIZYTY_T (CZY_PIERWSZA, DATA, GODZINA, ID_KLIENTA, ID_LEKARZA, USLUGA) VALUES ('$CZY_PIERWSZA','$DATA','$GODZINA','$ID_KLIENTA','$ID_LEKARZA','$USLUGA')";
+                $sql = "INSERT INTO wizyty_t (CZY_PIERWSZA, DATA, GODZINA, ID_KLIENTA, ID_LEKARZA, USLUGA) VALUES ('$CZY_PIERWSZA','$DATA','$GODZINA','$ID_KLIENTA','$ID_LEKARZA','$USLUGA')";
 
                 if(!mysqli_query($con,$sql)) {
                     $string = 'Coś poszło nie tak :(';
                     notSexy($string);
                 } else {
-                    $string = 'Dodano klienta!';
+                    $string = 'Dodano wizytę!';
                     sexyView($string);
                 }
             }
@@ -57,17 +58,25 @@
     } else {
         $ID_KLIENTA = $_POST['id_klienta'];
 
-        $sql = checkIfExist($con, $ID_KLIENTA);
-        if(!mysqli_query($con,$sql)) {
+        $sql = "SELECT ID_KLIENTA FROM klienci_t WHERE ID_KLIENTA = $ID_KLIENTA";
+        
+        if(!mysqli_query($con,$sql) || empty($sql)) {
             $string = 'Błędne ID klienta!';
             notSexy($string);
         }
         else {
-            $sql = "INSERT INTO WIZYTY_T (CZY_PIERWSZA, DATA, GODZINA, ID_KLIENTA, ID_LEKARZA, USLUGA) VALUES ('$CZY_PIERWSZA','$DATA','$GODZINA','$ID_KLIENTA','$ID_LEKARZA','$USLUGA')";
-            $string = 'Dodano klienta!';
-            sexyView($string);
+            $sql = "INSERT INTO wizyty_t (CZY_PIERWSZA, DATA, GODZINA, ID_KLIENTA, ID_LEKARZA, USLUGA) VALUES ('$CZY_PIERWSZA','$DATA','$GODZINA','$ID_KLIENTA','$ID_LEKARZA','$USLUGA')";
+
+            if(!mysqli_query($con,$sql)) {
+            $string = 'Coś poszło nie tak :(';
+            notSexy($string);
+            }
+            else{
+                $string = 'Dodano wizytę!';
+                sexyView($string);
+            }
         }
     }
 
     header("refresh:3; url=../../index.html");
-?>
+?>		

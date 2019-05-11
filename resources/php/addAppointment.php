@@ -1,8 +1,8 @@
 <?php
     function getMaxId ($con) {
-        $query = "SELECT MAX(ID_KLIENTA) FROM KLIENCI_T";
+        $query = "SELECT MAX(ID_KLIENTA) FROM klienci_t";
         $result = $con->query($query);
-        $row = $result->fetch_array(MYSQLI_NUM);
+        $row = mysqli_fetch_array($result, MYSQL_NUM);
         return $row[0];
     }
 ?>
