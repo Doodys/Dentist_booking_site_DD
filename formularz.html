@@ -13,7 +13,6 @@
     <meta name="author" content="Michał Dudys, Natalia Dobrowolska">
     <script src='resources/js/enableClientID.js'></script>
     <script src='resources/js/minDate.js'></script>
-    <script src='resources/js/fillTextArea.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
@@ -38,14 +37,13 @@
                     </div>
                 </div>
                 <li><a href='http://dobrodudys.cba.pl/index.html#pracownicy'>Pracownicy</a></li>
-                <li><a href='http://dobrodudys.cba.pl/index.html'>Zamów wizytę</a></li>
+                <li><a href='http://dobrodudys.cba.pl/formularz.html'>Zamów wizytę</a></li>
                 <li><a href='http://dobrodudys.cba.pl/index.html#kontakt'>Kontakt</a></li>
             </ul>
         </div>
     </nav>
     <section class="fom">
         <section class='testowy_formularz form-horizontal' id='zapisz'>
-
             <fieldset style="border:none;">
                 <legend>Formularz kontaktowy</legend>
                 <div class="for1">
@@ -127,12 +125,10 @@
                             <input type='submit' value='Zatwierdź wybór'>
                         </div>
                     </form>
-                    <form action='' method='POST'>
+                    <form action='booked.php'>
                         <div class='for'>
-                            <!-- <a class='btn visit' href='#'><b>Dni zajęte</b></a> -->
-                            <input type="submit" class='btn visit' value="Dni zajęte" onclick='insertText("fill", "");'>
+                            <input type="submit" class='btn visit' value="Dni zajęte" style='margin-top: -10px;'>
                         </div>
-                        <textarea id='fill'></textarea>
                     </form>
                 </div>
             </fieldset>

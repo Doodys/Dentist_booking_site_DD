@@ -1,4 +1,4 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 
 /* PODSTAWY */
 
@@ -540,6 +540,18 @@ h2:after {
     font-size: 20px;
 }
 
+
+.for2 {
+    padding: 10px 20px;
+    margin-top: 10px;
+    max-width: 500px;
+    height: 550px;
+    background-color: #fff;
+    box-shadow: 0 0 20px 2px #333;
+    border-radius: 30px;
+    font-size: 15px;
+}
+
 .for {
     margin: 10px auto;
     max-width: 500px;
@@ -560,9 +572,9 @@ h2:after {
     cursor: pointer;
 }
 
-input[type=submit] {
+.for input[type=submit] {
     font-size: 16px;
-    margin-top: 15px;
+    margin-top: 5px;
     background-color: #e67e22;
     color: #fff;
     height: 35px;
@@ -587,7 +599,10 @@ input[type=submit] {
 /*PODSTRONY*/
 
 .zabiegi {
-    background-color: #939393;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/back.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
 }
 
 .zabieg {
@@ -602,4 +617,34 @@ input[type=submit] {
 }
 
 
-/*# sourceMappingURL=style.css.map */
+/* TABELA ZAJĘTA */
+
+.fixed_header {
+    margin-top: 20px;
+    width: 400px;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.fixed_header tbody {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    height: 480px;
+}
+
+.fixed_header thead tr {
+    display: block;
+}
+
+.fixed_header thead {
+    background: black;
+    color: #fff;
+}
+
+.fixed_header th,
+.fixed_header td {
+    padding: 5px;
+    text-align: center;
+    width: 200px;
+}
