@@ -21,29 +21,29 @@
         table-layout: fixed;
         border-collapse: collapse;
         }
-        
+
         .fixed_header tbody {
             display: block;
             width: 100%;
             overflow: auto;
             height: 480px;
         }
-        
+
         .fixed_header thead tr {
             display: block;
         }
-        
+
         .fixed_header thead {
             background: black;
             color: #fff;
         }
-        
+
         .fixed_header th,
         .fixed_header td {
             padding: 5px;
             text-align: center;
             width: 200px;
-            
+
         }
         .for2 {
             padding: 10px 20px;
@@ -65,6 +65,9 @@
             color: #fff;
             font: bolder;
             font-size: 30px;
+        }
+        .table-form {
+            padding: 0 20vw 0 20vw;
         }
     </style>
 </head>
@@ -111,9 +114,10 @@
         </nav>
 
 
-        <section class="fom">
-        <table style='margin-left:36vh;'>
-        <tr>        
+    <section class="fom">
+        <div class='table-form'>
+            <table>
+            <tr>
             <section id='zapisz'>
             <td>
             <fieldset  class='testowy_formularz' style="border:none;">
@@ -196,13 +200,13 @@
                         <div class='for'>
                             <input type='submit' value='Zatwierdź wybór'>
                         </div>
-                    </form>                   
+                    </form>
                 </div>
             </fieldset>
             </td>
         </section>
-        
-        
+
+
             <section id='zapisz'>
             <td>
                 <fieldset class='testowy_formularz' style="border:none;">
@@ -220,13 +224,13 @@
                                 {
                                     if($row['ID_LEKARZA'] == 1) { $string = 'Michał Dudys'; }
                                     else { $string = 'Natalia Dobrowolska'; }
-        
+
                                     $origDate = $row['DATA'];
                                     $newDate = date("d-m-Y", strtotime($origDate));
-        
+
                                     $origTime = $row['GODZINA'];
                                     $newTime = date("H:i", strtotime($origTime));
-        
+
                                     echo "<tr'>";
                                     echo "<td><p>" . $newDate . "</p></td><td><p>" . $newTime . "</p></td><td><p>" . $string . "</p></td>";
                                     echo "</tr>";
@@ -237,9 +241,10 @@
                     </div>
                 </fieldset>
             </td>
-            </section>            
+            </section>
             </tr>
             </table>
+            </div>
         </section>
 
         <section class="social ">
