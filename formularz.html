@@ -19,25 +19,25 @@
     <nav>
         <div class='row1'>
             <ul class='main-nav'>
-                <li><a href='http://dobrodudys.cba.pl/index.html#o_nas'>O nas</a></li>
+                <li><a href='index.html#o_nas'>O nas</a></li>
                 <div class='dropdown'>
                     <li><a>Usługi</a></li>
                     <div class='dropdown-content'>
                         <ul>
-                            <li><a href="http://dobrodudys.cba.pl/korona.html">Korony</a></li>
-                            <li><a href="http://dobrodudys.cba.pl/Stomatologia%20kosmetyczna.html">Stomatologia kosmetyczna</a></li>
-                            <li><a href="http://dobrodudys.cba.pl/Protezy.html">Protezy</a></li>
-                            <li><a href="http://dobrodudys.cba.pl/Odbudowa%20jamy%20ustnej.html">Odbudowa jamy ustnej</a></li>
-                            <li><a href="http://dobrodudys.cba.pl/Implantologia%20stomatologiczna.html">Implantologia stomatologiczna</a></li>
-                            <li><a href="http://dobrodudys.cba.pl/Leczenie%20kana%C5%82owe.html">Leczenie kanałowe</a></li>
-                            <li><a href="http://dobrodudys.cba.pl/Lic%C3%B3wki%20porcelanowe.html">Licówki porcelanowe</a></li>
-                            <li><a href="http://dobrodudys.cba.pl/Sedacja%20wziewna.html">Sedacja wziewna</a></li>
+                            <li><a href="korona.html">Korony</a></li>
+                            <li><a href="Stomatologia%20kosmetyczna.html">Stomatologia kosmetyczna</a></li>
+                            <li><a href="Protezy.html">Protezy</a></li>
+                            <li><a href="Odbudowa%20jamy%20ustnej.html">Odbudowa jamy ustnej</a></li>
+                            <li><a href="Implantologia%20stomatologiczna.html">Implantologia stomatologiczna</a></li>
+                            <li><a href="Leczenie%20kana%C5%82owe.html">Leczenie kanałowe</a></li>
+                            <li><a href="Lic%C3%B3wki%20porcelanowe.html">Licówki porcelanowe</a></li>
+                            <li><a href="Sedacja%20wziewna.html">Sedacja wziewna</a></li>
                         </ul>
                     </div>
                 </div>
-                <li><a href='http://dobrodudys.cba.pl/index.html#pracownicy'>Pracownicy</a></li>
-                <li><a href='http://dobrodudys.cba.pl/formularz.html'>Zamów wizytę</a></li>
-                <li><a href='http://dobrodudys.cba.pl/index.html#kontakt'>Kontakt</a></li>
+                <li><a href='index.html#pracownicy'>Pracownicy</a></li>
+                <li><a href='formularz.html'>Zamów wizytę</a></li>
+                <li><a href='index.html#kontakt'>Kontakt</a></li>
             </ul>
         </div>
     </nav>
@@ -47,35 +47,35 @@
                 <legend>Formularz kontaktowy</legend>
                 <div class="for1">
                     <form action='resources/php/post.php' method='POST'>
-                            <div class='for'>
-                                Pierwszy raz u nas? <select id='dropdown' name='first_list' onchange="di_en()" onchange='di_en_form()'>
+                        <div class='for'>
+                            Pierwszy raz u nas? <select id='dropdown' name='first_list' onchange="di_en()" onchange='di_en_form()'>
                                     <option value='TAK'>TAK</option>
                                     <option value='NIE'>NIE</option>
                                 </select>
-                                <br><br><label id='id_input_text' style='visibility: hidden;'>Podaj swoje unikalne ID pracjenta: </label><input type='number' name='id_klienta' id='id_input' style='visibility: hidden;'>
-                            </div>
-                            <div id='full_form' style='visibility: visible;'>
+                            <br><br><label id='id_input_text' style='visibility: hidden;'>Podaj swoje unikalne ID pracjenta: </label><input type='number' name='id_klienta' id='id_input' style='visibility: hidden;'>
+                        </div>
+                        <div id='full_form' style='visibility: visible;'>
                             <div class='for'>
                                 Imię: <input type='text' name='imie' id='form_part' pattern='[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ\]+'>
                             </div>
                             <div class='for'>
                                 Nazwisko: <input type='text' name='nazwisko' id='form_part' pattern='[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ\-]+'>
-                            </div>                            
-                                <div class='for'>                                
-                                    E-mail: <input type='email' name='mail' id='form_part'>                                
-                                </div>
-                                <div class='for'>
-                                    Numer telefonu: <input type='text' name='phone' id='txt' pattern='[0-9]{3}-[0-9]{3}-[0-9]{3}' maxlength="11" placeholder='123-456-789'>
-                                </div>
                             </div>
                             <div class='for'>
-                                Wybór lekarza: <select name='dent_list'>
+                                E-mail: <input type='email' name='mail' id='form_part'>
+                            </div>
+                            <div class='for'>
+                                Numer telefonu: <input type='text' name='phone' id='txt' pattern='[0-9]{3}-[0-9]{3}-[0-9]{3}' maxlength="11" placeholder='123-456-789'>
+                            </div>
+                        </div>
+                        <div class='for'>
+                            Wybór lekarza: <select name='dent_list'>
                                     <option value='1'>Michał Dudys</option>
                                     <option value='2'>Natalia Dobrowolska</option>
                                 </select>
-                            </div>
-                            <div class='for'>
-                                Wybór usługi: <select name='job_list'>
+                        </div>
+                        <div class='for'>
+                            Wybór usługi: <select name='job_list'>
                                     <option value='Wizyta kontrolna'>Wizyta kontrolna</option>
                                     <option value='Korony'>Korony</option>
                                     <option value='Stomatologia kosmetyczna'>Stomatologia kosmetyczna</option>
@@ -85,13 +85,13 @@
                                     <option value='Leczenie kanałowe'>Leczenie kanałowe</option>
                                     <option value='Licówki porcelanowe'>Licówki porcelanowe</option>
                                 </select>
-                            </div>
-                            <div class='for'>
-                                Data: <input type='date' id='datefield' name='app_date' min='1899-01-01' max='2030-12-31' onmouseover="minDate() " placeholder='dd-mm-rrrr' required>
-                            </div>
-                            <div class='for'>
-                                Godzina:
-                                <select name='app_time'>
+                        </div>
+                        <div class='for'>
+                            Data: <input type='date' id='datefield' name='app_date' min='1899-01-01' max='2030-12-31' onmouseover="minDate() " placeholder='dd-mm-rrrr' required>
+                        </div>
+                        <div class='for'>
+                            Godzina:
+                            <select name='app_time'>
                                     <option value="08:00 ">08:00</option>
                                     <option value="08:30 ">08:30</option>
                                     <option value="09:00 ">09:00</option>
@@ -119,11 +119,11 @@
                                     <option value="20:00 ">20:00</option>
                                     <option value="20:30 ">20:30</option>
                                 </select>
-                            </div>
-                            <div class='for'>
-                                <input type='submit' value='Zatwierdź wybór'>
-                            </div>
-                        </form>
+                        </div>
+                        <div class='for'>
+                            <input type='submit' value='Zatwierdź wybór'>
+                        </div>
+                    </form>
                     <form action='booked.php'>
                         <div class='for'>
                             <input type="submit" class='btn visit' value="Dni zajęte" style='margin-top: -10px;'>

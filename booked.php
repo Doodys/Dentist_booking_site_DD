@@ -21,29 +21,29 @@
         table-layout: fixed;
         border-collapse: collapse;
         }
-        
+
         .fixed_header tbody {
             display: block;
             width: 100%;
             overflow: auto;
             height: 480px;
         }
-        
+
         .fixed_header thead tr {
             display: block;
         }
-        
+
         .fixed_header thead {
             background: black;
             color: #fff;
         }
-        
+
         .fixed_header th,
         .fixed_header td {
             padding: 5px;
             text-align: center;
             width: 200px;
-            
+
         }
         .for2 {
             padding: 10px 20px;
@@ -69,19 +69,19 @@
         .table-form {
             padding: 0 20vw 0 20vw;
         }
-        
+
     </style>
 </head>
 
 <body>
     <?php
-    $con = mysqli_connect('mysql.cba.pl', 'dojdyl', '1Q0@2m9jot', 'dojdyl');
+    $con = mysqli_connect('localhost', 'root', 'dudysdobrozomb', 'dentist_prod');
 
     if(!$con) {
         echo 'Not connected to server!';
     }
 
-    if(!mysqli_select_db($con, 'dojdyl')) {
+    if(!mysqli_select_db($con, 'dentist_prod')) {
         echo 'Database not selected!';
     }
 
@@ -91,25 +91,25 @@
         <nav>
             <div class='row1'>
                 <ul class='main-nav'>
-                    <li><a href='http://dobrodudys.cba.pl/index.html#o_nas'>O nas</a></li>
+                    <li><a href='index.html#o_nas'>O nas</a></li>
                     <div class='dropdown'>
                         <li><a>Usługi</a></li>
                         <div class='dropdown-content'>
                             <ul>
-                                <li><a href="http://dobrodudys.cba.pl/korona.html">Korony</a></li>
-                                <li><a href="http://dobrodudys.cba.pl/Stomatologia%20kosmetyczna.html">Stomatologia kosmetyczna</a></li>
-                                <li><a href="http://dobrodudys.cba.pl/Protezy.html">Protezy</a></li>
-                                <li><a href="http://dobrodudys.cba.pl/Odbudowa%20jamy%20ustnej.html">Odbudowa jamy ustnej</a></li>
-                                <li><a href="http://dobrodudys.cba.pl/Implantologia%20stomatologiczna.html">Implantologia stomatologiczna</a></li>
-                                <li><a href="http://dobrodudys.cba.pl/Leczenie%20kana%C5%82owe.html">Leczenie kanałowe</a></li>
-                                <li><a href="http://dobrodudys.cba.pl/Lic%C3%B3wki%20porcelanowe.html">Licówki porcelanowe</a></li>
-                                <li><a href="http://dobrodudys.cba.pl/Sedacja%20wziewna.html">Sedacja wziewna</a></li>
+                                <li><a href="korona.html">Korony</a></li>
+                                <li><a href="Stomatologia%20kosmetyczna.html">Stomatologia kosmetyczna</a></li>
+                                <li><a href="Protezy.html">Protezy</a></li>
+                                <li><a href="Odbudowa%20jamy%20ustnej.html">Odbudowa jamy ustnej</a></li>
+                                <li><a href="Implantologia%20stomatologiczna.html">Implantologia stomatologiczna</a></li>
+                                <li><a href="Leczenie%20kana%C5%82owe.html">Leczenie kanałowe</a></li>
+                                <li><a href="Lic%C3%B3wki%20porcelanowe.html">Licówki porcelanowe</a></li>
+                                <li><a href="Sedacja%20wziewna.html">Sedacja wziewna</a></li>
                             </ul>
                         </div>
                     </div>
-                    <li><a href='http://dobrodudys.cba.pl/index.html#pracownicy'>Pracownicy</a></li>
-                    <li><a href='http://dobrodudys.cba.pl/formularz.html'>Zamów wizytę</a></li>
-                    <li><a href='http://dobrodudys.cba.pl/index.html#kontakt'>Kontakt</a></li>
+                    <li><a href='index.html#pracownicy'>Pracownicy</a></li>
+                    <li><a href='formularz.html'>Zamów wizytę</a></li>
+                    <li><a href='index.html#kontakt'>Kontakt</a></li>
                 </ul>
             </div>
         </nav>
@@ -118,7 +118,7 @@
         <section class="fom">
         <div class='table-form'>
         <table>
-        <tr>        
+        <tr>
             <section id='zapisz'>
             <td>
             <fieldset  class='testowy_formularz' style="border:none;">
@@ -201,13 +201,13 @@
                         <div class='for'>
                             <input type='submit' value='Zatwierdź wybór'>
                         </div>
-                    </form>                   
+                    </form>
                 </div>
             </fieldset>
             </td>
         </section>
-        
-        
+
+
             <section id='zapisz'>
             <td>
                 <fieldset class='testowy_formularz' style="border:none;">
@@ -226,14 +226,14 @@
                                 {
                                     if($row['ID_LEKARZA'] == 1) { $string = 'Michał Dudys'; }
                                     else { $string = 'Natalia Dobrowolska'; }
-        
+
                                     if($row['DATA'] >= date("Y-m-d")){
                                         $origDate = $row['DATA'];
                                         $newDate = date("d-m-Y", strtotime($origDate));
-            
+
                                         $origTime = $row['GODZINA'];
-                                        $newTime = date("H:i", strtotime($origTime));                                   
-        
+                                        $newTime = date("H:i", strtotime($origTime));
+
                                         echo "<tr'>";
                                         echo "<td><p>" . $newDate . "</p></td><td><p>" . $newTime . "</p></td><td><p>" . $string . "</p></td>";
                                         echo "</tr>";
@@ -245,7 +245,7 @@
                     </div>
                 </fieldset>
             </td>
-            </section>            
+            </section>
             </tr>
             </table>
             <div>

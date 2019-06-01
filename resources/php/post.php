@@ -1,5 +1,5 @@
 <?php
-    $con = mysqli_connect('mysql.cba.pl', 'dojdyl', '1Q0@2m9jot', 'dojdyl');
+    $con = mysqli_connect('localhost', 'root', 'dudysdobrozomb', 'dentist_prod');
 
     include 'checkExistance.php';
     include 'updateClient.php';
@@ -11,7 +11,7 @@
         echo 'Not connected to server!';
     }
 
-    if(!mysqli_select_db($con, 'dojdyl')) {
+    if(!mysqli_select_db($con, 'dentist_prod')) {
         echo 'Database not selected!';
     }
 
