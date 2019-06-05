@@ -3,17 +3,7 @@
     function sendMail($con, $EMAIL, $IMIE, $NAZWISKO, $ID_LEKARZA, $DATA, $GODZINA){
     require("../../vendors/php/PHPMailer/class.phpmailer.php");
     
-    //$con = mysqli_connect('mysql.cba.pl', 'dojdyl', '1Q0@2m9jot', 'dojdyl');
-    
     $mail = new PHPMailer();
-    
-    $EMAIL = $_POST['mail'];
-    $IMIE = $_POST['imie'];
-    $NAZWISKO = $_POST['nazwisko'];
-    $ID_LEKARZA = $_POST['dent_list'];
-    $CZY_PIERWSZA = $_POST['first_list'];
-    $DATA = $_POST['app_date'];
-    $GODZINA = $_POST['app_time'];
     
     if($ID_LEKARZA == 1) { $lekarz = "Michał Dudys"; }
     else { $lekarz = "Natalia Dobrowolska"; }
@@ -29,6 +19,7 @@
     $mail->From = "wizyty@dobrodudys.cba.pl";
     $mail->FromName = "Dobro&Dudys";
     $mail->AddAddress("$EMAIL");
+    $mail->AddEmbeddedImage('../img/logo_cut.png','logo');
     
     $mail->WordWrap = 50;                              
     $mail->IsHTML(true);    
@@ -43,14 +34,14 @@
         }
         
         $mail->Subject = "Szczegóły wizyty w gabinecie stomatologiczny Dobro & Dudys";
-        $mail->Body    = "Witaj $IMIE $NAZWISKO!<br><br>Została zamówiona wizyta dnia $DATA o godzinie $GODZINA <br>Twoim lekarzem będzie $lekarz <br><br>Twoim unikalnym id klienta jest $NEW_ID<br><b>Zapisz je!</b><br>Do zobaczenia, $IMIE :)<br><br>Dobro $ Dudys - gabinet stomatologiczny";
-        $mail->AltBody = "Witaj $IMIE $NAZWISKO! Została zamówiona wizyta dnia $DATA o godzinie $GODZINA.Twoim lekarzem będzie $lekarz. Twoim unikalnym id klienta jest $NEW_ID - Zapisz je! Do zobaczenia, $IMIE :) ~ Dobro $ Dudys - gabinet stomatologiczny";
+        $mail->Body    = "Witaj $IMIE $NAZWISKO!<br><br>Została zamówiona wizyta dnia $DATA o godzinie $GODZINA <br>Twoim lekarzem będzie $lekarz <br><br>Twoim unikalnym id klienta jest $NEW_ID<br><b>Zapisz je!</b><br>Do zobaczenia, $IMIE :)<br><br>Dobro&Dudys - gabinet stomatologiczny<br><br><img src='cid:logo'>";
+        $mail->AltBody = "Witaj $IMIE $NAZWISKO! Została zamówiona wizyta dnia $DATA o godzinie $GODZINA.Twoim lekarzem będzie $lekarz. Twoim unikalnym id klienta jest $NEW_ID - Zapisz je! Do zobaczenia, $IMIE :) ~ Dobro&Dudys - gabinet stomatologiczny";
     
     } else {
         
         $mail->Subject = "Szczegóły wizyty w gabinecie stomatologiczny Dobro & Dudys";
-        $mail->Body    = "Witaj $IMIE $NAZWISKO!<br><br>Została zamówiona wizyta dnia $DATA o godzinie $GODZINA <br>Twoim lekarzem będzie $lekarz <br><b>Zapisz je!</b><br>Do zobaczenia, $IMIE :)<br><br>Dobro $ Dudys - gabinet stomatologiczny";
-        $mail->AltBody = "Witaj $IMIE $NAZWISKO! Została zamówiona wizyta dnia $DATA o godzinie $GODZINA.Twoim lekarzem będzie $lekarz. Twoim unikalnym id klienta jest $NEW_ID - Zapisz je! Do zobaczenia, $IMIE :) ~ Dobro $ Dudys - gabinet stomatologiczny";
+        $mail->Body    = "Witaj $IMIE $NAZWISKO!<br><br>Została zamówiona wizyta dnia $DATA o godzinie $GODZINA <br>Twoim lekarzem będzie $lekarz <br><b>Zapisz je!</b><br>Do zobaczenia, $IMIE :)<br><br>Dobro&Dudys - gabinet stomatologicznyy<br><br><img src='cid:logo'>";
+        $mail->AltBody = "Witaj $IMIE $NAZWISKO! Została zamówiona wizyta dnia $DATA o godzinie $GODZINA.Twoim lekarzem będzie $lekarz. Twoim unikalnym id klienta jest $NEW_ID - Zapisz je! Do zobaczenia, $IMIE :) ~ Dobro&Dudys - gabinet stomatologiczny";
         
     }
     
