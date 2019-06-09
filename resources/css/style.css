@@ -475,7 +475,6 @@ h2:after {
     margin-bottom: 0px;
     padding: 0px;
     height: auto;
-    margin-left:165px;
 }
 
 .k {
@@ -483,10 +482,9 @@ h2:after {
     padding-left: 100px;
     float: left;
     text-align: center;
-    margin-left:2px;
-    margin-right:50px;
+    margin-left: 10vw;
+    margin-right: 10px;
 }
-
 
 .bolded:after {
     display: block;
@@ -498,9 +496,9 @@ h2:after {
     margin-top: 15px;
 }
 
-.mapka{
-    float:left;
-    margin-right:70px;
+.mapka {
+    float: left;
+    margin-right: 10vw;
 }
 
 
@@ -544,7 +542,6 @@ h2:after {
     border-radius: 30px;
     font-size: 20px;
 }
-
 
 .for2 {
     padding: 10px 20px;
